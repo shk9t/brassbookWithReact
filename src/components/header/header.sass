@@ -1,0 +1,130 @@
+.header
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    z-index: 10
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 40px 60px
+    z-index: 100
+
+    &_sign
+        color: rgba(35, 11, 63, 0.70)
+        justify-content: flex-start
+        gap: 80px
+    // .header__logo
+
+    &__logo
+        font-family: var(--main-font)
+        font-size: 30px
+        font-style: normal
+        font-weight: 700
+        line-height: 1.4
+        letter-spacing: -0.6px
+        &_black
+            color: var(--title-color)
+
+    // .header__nav
+
+    &__nav
+
+    // .header__btns
+
+    &__btns
+        display: flex
+        align-items: center
+    &__burger
+        @media (max-width: 1200px)
+            display: block
+            width: 30px
+            height: 18px
+            position: relative
+            z-index: 5
+            cursor: pointer
+            span
+                transition: all .2s
+                position: absolute
+                top: calc(50% - 1px)
+                left: 0
+                width: 100%
+                height: 2px
+                background-color: #fff
+                &:first-child
+                    top: 0
+                &:last-child
+                    bottom: 0
+                    top: auto
+
+
+.nav
+    @media (max-width: 1200px)
+        position: absolute
+        top: 0
+        left: calc(-130% - 120px)
+        height: 100vh
+        width: calc(100% + 120px)
+        background-color: var(--main-color)
+        display: flex
+        overflow: auto
+        transition: all .2s
+        background: #6B27FF
+    &.active
+        left: -60px
+    &__body
+        list-style-type: none
+        display: flex
+        gap: 16px
+        @media (max-width: 1200px)
+            padding: 30px
+            flex-direction: column
+            gap: 0
+            margin: auto
+
+    // .nav__link
+
+    &__link
+        text-decoration: none
+        color: inherit
+        font-family: var(--accent-font)
+        font-size: 16px
+        font-weight: 600
+        line-height: 1.45
+        letter-spacing: -0.16px
+
+        &::after
+            content: ""
+            opacity: 0
+            display: block
+            width: 100%
+            background: white
+            height: 1px
+            transition: opacity .2s
+        &_black
+            &::after
+                background: rgba(35, 11, 63, 0.70)
+        &:hover
+            &::after
+                opacity: 1
+        @media (max-width: 1200px)
+            display: block
+            font-size: 30px
+            line-height: 70px
+.sign-buttons
+    font-family: var(--accent-font)
+    display: flex
+    gap: clamp(0.313rem, -0.18rem + 2.46vw, 1rem)
+    font-size: 16px
+    font-weight: 900
+    &_in-btn
+        background: #6B27FF
+        color: #fff
+        border: 2px solid #fff
+        &:hover
+            background: #fff
+            color: #6B27FF
+    &_out-btn
+        @media (max-width: 767px)
+            display: none
+

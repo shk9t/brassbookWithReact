@@ -1,0 +1,70 @@
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+html
+    color: #fff
+.container
+    padding: 0 80px
+.button
+    border-radius: 60px
+    background: var(--accent-color)
+    display: inline-block
+    padding: 16px 32px
+
+    text-decoration: none
+    color: var(--font-color)
+    font-family: var(--accent-font)
+    font-size: clamp(0.625rem, 0.216rem + 2.05vw, 1.75rem)
+    font-weight: 800
+    line-height: 1.4
+    letter-spacing: -0.28px
+    text-transform: uppercase
+
+    transition: background .2s
+    &:hover
+        background: linear-gradient(180deg, #EEDD51 31.97%, #EEAF51 86.89%)
+    @media (max-width: 767px)
+        padding: 8px 16px
+
+.text
+    color: var(--font-color)
+    font-size: 24px
+    line-height: 1.6
+    letter-spacing: -0.48px
+    font-family: var(--main-font)
+    font-weight: 400
+
+.medium
+    font-weight: 600
+
+a
+    text-decoration: none
+    color: inherit
+
+.lock
+    overflow: hidden
+
+
+
+.other-button
+    padding: 16px 32px
+    border-radius: 60px
+    border: 2px solid #6B27FF
+    background: rgba(255, 255, 255, 0.15)
+    cursor: pointer
+    transition: all .2s
+    text-transform: uppercase
+    display: inline-block
+    font-family: var(--accent-font)
+    font-size: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem)
+
+    background: #fff
+    color: #6B27FF
+    &:hover
+        background: #6B27FF
+        color: #fff
+
+    @media (max-width: 767px)
+        padding: 8px 16px

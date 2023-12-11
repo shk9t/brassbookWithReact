@@ -1,13 +1,15 @@
 import React, {useState} from "react";
+import './signInput.sass';
+import './feedbackInput.sass'
 
-interface SignFieldProps {
-    id: string
-    type: string
-    name: string
+
+interface SignFieldProps extends React.HTMLAttributes<HTMLInputElement>{
     label?: string
     placeHolder?: string
+    type?: string
+    name?: string
 }
-function SignField({label, placeHolder, id, type}: SignFieldProps) {
+function Input({name, label, placeHolder, id, type, className}: SignFieldProps) {
     const [value, setValue] = useState('')
 
     const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,12 +22,14 @@ function SignField({label, placeHolder, id, type}: SignFieldProps) {
             <input
                 type={type}
                 id={id}
+                name={name}
                 value={value}
                 placeholder={placeHolder}
+                className={className}
                 onChange={(event) => changeHandler(event)}
             />
         </>
     )
 }
 
-export default SignField
+export default Input

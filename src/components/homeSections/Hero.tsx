@@ -1,5 +1,6 @@
 import '../header/header.sass'
 import './hero.sass'
+import Button from "../button/Button.tsx";
 
 function Hero () {
     return (
@@ -14,11 +15,11 @@ function Hero () {
                 </defs>
             </svg >
 
-            <div className="hero__content">
+            <div className="hero__container">
                 <div className="hero__main">
                     <div className="hero__title">Попробуй играть<br/> с нами</div>
                     <div className="hero__info">Попробуйте огромную библиотеку цифровых<br/> фонограмм и найдите свои любимые<br/> произведения.</div>
-                    <a href="" className="hero__button button">Начать обучение</a>
+                    <Button to={'/'} className={'hero__button button-type-2'}>Начать обучение</Button>
                 </div>
             </div>
 

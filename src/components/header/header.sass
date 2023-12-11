@@ -3,17 +3,18 @@
     top: 0px
     left: 0px
     width: 100%
-    z-index: 10
-    display: flex
-    justify-content: space-between
-    align-items: center
     padding: 40px 60px
     z-index: 100
+    &_paddint-34
+        padding-bottom: 34px
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &_without-enter
+            justify-content: flex-start
+            gap: 80px
 
-    &_sign
-        color: rgba(35, 11, 63, 0.70)
-        justify-content: flex-start
-        gap: 80px
     // .header__logo
 
     &__logo
@@ -35,6 +36,10 @@
     &__btns
         display: flex
         align-items: center
+        gap: 16px
+        font-family: var(--accent-color)
+        font-size: 16px
+        font-weight: 900
     &__burger
         @media (max-width: 1200px)
             display: block
@@ -102,6 +107,7 @@
             height: 1px
             transition: opacity .2s
         &_black
+            color: rgba(35, 11, 63, 0.70)
             &::after
                 background: rgba(35, 11, 63, 0.70)
         &:hover
@@ -111,20 +117,5 @@
             display: block
             font-size: 30px
             line-height: 70px
-.sign-buttons
-    font-family: var(--accent-font)
-    display: flex
-    gap: clamp(0.313rem, -0.18rem + 2.46vw, 1rem)
-    font-size: 16px
-    font-weight: 900
-    &_in-btn
-        background: #6B27FF
-        color: #fff
-        border: 2px solid #fff
-        &:hover
-            background: #fff
-            color: #6B27FF
-    &_out-btn
-        @media (max-width: 767px)
-            display: none
+
 

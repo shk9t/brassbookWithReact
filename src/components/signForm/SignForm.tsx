@@ -3,7 +3,7 @@ import * as React from "react";
 interface SignFormBodyProps {
     children: React.ReactNode
 }
-function SignFormBody({children}: SignFormBodyProps) {
+function SignForm({children}: SignFormBodyProps) {
     return(
         <form action="">
             {children}
@@ -11,4 +11,4 @@ function SignFormBody({children}: SignFormBodyProps) {
     )
 }
 
-export default SignFormBody
+export default SignForm

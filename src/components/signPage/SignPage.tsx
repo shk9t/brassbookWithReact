@@ -1,9 +1,9 @@
 import {NavLink} from "react-router-dom";
-import './SignUpForm.sass'
-import SignFormBody from "../signFormBody/SignFormBody.tsx";
-import SignField from "../signField/SignField.tsx";
+import './signPage.sass'
+import SignForm from "../signForm/SignForm.tsx";
+import Input from "../input/Input.tsx";
 
-function SignUpForm() {
+function SignPage() {
     return (
         <div className="sign-up">
             <div className="sign-up__container">
@@ -15,10 +15,10 @@ function SignUpForm() {
                         <NavLink to='/'>Войти</NavLink>
                     </p>
                 </div>
-                <SignFormBody children={ <SignField type={"email"}  name={'email'} id={"email"} placeHolder={"Введите вашу почту"}  label={"Почта"} />} />
+                <SignForm children={<Input type={"email"} id={"email"} name={'email'} placeHolder={"Введите вашу почту"} className={"sign__input"} label={"Почта"} />} />
             </div>
         </div>
     )
 }
 
-export default SignUpForm
+export default SignPage

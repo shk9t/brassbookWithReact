@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./components/Home.tsx";
-import Sign from "./components/Sign.tsx";
+import SignInPage from "./components/SignInPage.tsx";
+import Account from "./components/Account.tsx";
 
 function App() {
 
@@ -8,8 +9,9 @@ function App() {
       <Router>
           <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/signup" element={<Sign type={'up'}/>} />
-              <Route path="/signip" element={<Sign type={'in'}/>} />
+              <Route path="/signin" element={<SignInPage />} />
+              <Route path="/signup" element={<SignInPage />} />
+              <Route path="/account" element={<Account />} />
           </Routes>
       </Router>
   )

@@ -5,6 +5,11 @@ import HomeSwiper from "../homeSwiper/HomeSwiper.tsx";
 import Button from "../button/Button.tsx";
 import Input from "../input/Input.tsx";
 function More() {
+    // useEffect(() =>{
+    //     (document.querySelector('.more') as HTMLElement).style.height = (document.querySelector('.more__background') as HTMLElement).getBoundingClientRect().height + 'px'
+    //     console.log((document.querySelector('.more__background') as HTMLElement).getBoundingClientRect().height)
+    // }, [])
+
     return (
         <section className="more">
             <img className="more__notes" src={notes} alt="" />
@@ -49,6 +54,7 @@ function More() {
                     <Input className='feedback__input' placeHolder={"Ваше почта"}></Input>
                     <textarea name="message" id="" className='feedback__message'></textarea>
                     <Button to={'./'} className={'button-type-2 feedback__button'}>Отправить</Button>
+                    <div className="feedback__info">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href='/privacy'>политикой конфиденциальности</a></div>
                 </div>
             </div>
         </section>

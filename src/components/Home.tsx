@@ -8,11 +8,14 @@ import About from "./homeSections/About.tsx";
 import Tutor1 from "./homeSections/Tutor1.tsx";
 import Tutor2 from "./homeSections/Tutor2.tsx";
 import More from "./homeSections/More.tsx";
+import {useEffect} from "react";
 
 function Home() {
+    useEffect(() => {
+        (document.querySelector('.footer') as HTMLElement).style.bottom = -(document.querySelector('.footer') as HTMLElement).getBoundingClientRect().height + 'px';
+    }, [])
     return (
         <>
-
             <Header />
             <main>
                 <div className="tube">
@@ -34,10 +37,9 @@ function Home() {
                 <Tutor1 />
                 <Tutor2 />
                 <More />
-
             </main>
-
-
+            {/*<Header headerStyle="footer"/>*/}
+            <Header headerStyle="footer"/>
         </>
     )
 }

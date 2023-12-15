@@ -1,4 +1,3 @@
-import '../header/header.sass'
 import './hero.sass'
 import Button from "../button/Button.tsx";
 

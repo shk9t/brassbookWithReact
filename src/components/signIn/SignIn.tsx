@@ -1,6 +1,7 @@
 import {NavLink} from "react-router-dom";
 import './signIn.sass'
 import SignInForm from "../signInForm/SignInForm.tsx";
+import ImagePipe from "../UI/ImagePipe.tsx";
 
 function SignIn() {
     return (
@@ -12,7 +13,7 @@ function SignIn() {
                     </svg>Вернуться на главную</NavLink>
                     <h1 className={"sign-in__title"}>Вход</h1>
                     <p className="sign-in__text">Выберите тип регистрации и введите необходимые данные. <br/>
-                        Вы уже зарегистрированны на сайте? <NavLink to='/'>Зарегистрироваться</NavLink>
+                        Вы уже зарегистрированны на сайте? <NavLink to='/signup'>Зарегистрироваться</NavLink>
                     </p>
                     <div className="sign-in__forget-container">
                         <div className="sign-in__forget-title">Забыли пароль?</div>
@@ -20,6 +21,7 @@ function SignIn() {
                     </div>
                 </div>
                 <SignInForm />
+                <ImagePipe />
             </div>
         </div>
     )

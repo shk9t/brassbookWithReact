@@ -40,7 +40,7 @@ function SignInForm({className}: SignFormBodyProps) {
                 </div>
             </div>
             <div className="sign-form__btn-container ">
-                <Button isBtn={true} className="button-type-2 sign-page-button">Войти</Button>
+                <Button isBtn={true} className="button-type-3 sign-page-button">Войти</Button>
             </div>
         </form>
     )

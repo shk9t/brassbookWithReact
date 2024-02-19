@@ -1,6 +1,7 @@
 import {NavLink} from "react-router-dom";
 import "./buttonType1.sass";
-import "./buttonType2.sass"
+import "./buttonType2.sass";
+import "./buttonType3.sass"
 import {ReactNode} from "react";
 
 

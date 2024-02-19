@@ -12,7 +12,7 @@ interface HeaderProps{
 }
 function Header({headerStyle, headerContainerStyle, logoStyle, linkStyle}: HeaderProps) {
     let links;
-    if (window.location.pathname === '/signin'){
+    if (window.location.pathname === '/signin' || window.location.pathname === '/signup'){
         links =
         <ul className="nav__body">
             <li><a href="#" className={"nav__link " + (linkStyle || '')}>О проекте</a></li>

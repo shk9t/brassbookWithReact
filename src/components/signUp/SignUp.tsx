@@ -1,5 +1,6 @@
 import {NavLink} from "react-router-dom";
 import SignUpForm from "../SignUpForm/SignUpForm.tsx";
+import ImagePipe from "../UI/ImagePipe.tsx";
 
 function SignUp() {
     return (
@@ -11,10 +12,11 @@ function SignUp() {
                     </svg>Вернуться на главную</NavLink>
                     <h1 className={"sign-in__title"}>Регистрация</h1>
                     <p className="sign-in__text">Выберите тип регистрации и введите необходимые данные. <br/>
-                        Вы уже зарегистрированны на сайте? <NavLink to='/'>Войти</NavLink>
+                        Вы уже зарегистрированны на сайте? <NavLink to='/signin'>Войти</NavLink>
                     </p>
                 </div>
                 <SignUpForm />
+                <ImagePipe />
             </div>
         </div>
     )

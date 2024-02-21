@@ -1,6 +1,7 @@
 import {NavLink} from "react-router-dom";
 import SignUpForm from "../SignUpForm/SignUpForm.tsx";
 import ImagePipe from "../UI/ImagePipe.tsx";
+import SignUpSelfAcc from "../SignUpForm/SignUpSelfAcc.tsx";
 
 function SignUp() {
     return (
@@ -16,7 +17,8 @@ function SignUp() {
                     </p>
                 </div>
                 <SignUpForm />
-                <ImagePipe />
+                <SignUpSelfAcc />
+                {/* <ImagePipe /> */}
             </div>
         </div>
     )

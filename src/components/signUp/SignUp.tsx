@@ -2,8 +2,11 @@ import {NavLink} from "react-router-dom";
 import SignUpForm from "../SignUpForm/SignUpForm.tsx";
 import ImagePipe from "../UI/ImagePipe.tsx";
 import SignUpSelfAcc from "../SignUpForm/SignUpSelfAcc.tsx";
+import { useState } from "react";
 
 function SignUp() {
+
+
     return (
         <div className="sign-in">
             <div className="sign-in__container container">

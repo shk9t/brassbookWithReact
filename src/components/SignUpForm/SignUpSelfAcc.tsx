@@ -10,6 +10,9 @@ const SignUpSelfAcc = () => {
     const [passwordDirty, setPasswordDirty] = useState(false)
     const [emailErr, setEmailErr] = useState('емейл не может быть пустым')
     const [passwordErr, setpasswordlErr] = useState('пароль не может быть пустым')
+    const [RepeatPassword, setRepeatPassword] = useState('')
+    const [RepeatPasswordDirty, setRepeatPasswordDirty] = useState(false)
+    const [repeatPasswordErr, setRepeatPasswordlErr] = useState('пароли должны совпадать')
 
     const emailHandler = (e) => {
         setEmail(e.target.value)
@@ -27,9 +30,20 @@ const SignUpSelfAcc = () => {
             setpasswordlErr('пароль должен быть длиннее 3 и меньше 12 символов')
             if(!e.target.value.length){
                 setpasswordlErr('Пароль не может быть пустым')
+            }if(e.target.value != RepeatPassword){
+                setRepeatPasswordlErr('пароли должны совпадать')
             }
         }else{
             setpasswordlErr('')
+        }
+    }
+
+    const repeatPasswordHandler = (e) => {
+        setRepeatPassword(e.target.value)
+        if(e.target.value != password ){
+            setRepeatPasswordlErr('пароли должны совпадать')
+        }else{
+            setRepeatPasswordlErr('')
         }
     }
 
@@ -41,6 +55,9 @@ const SignUpSelfAcc = () => {
                 break
             case 'password':
                 setPasswordDirty(true)
+                break
+            case 'RepeatPassword':
+                setRepeatPasswordDirty(true)
                 break
         }
     }
@@ -56,11 +73,12 @@ const SignUpSelfAcc = () => {
                     <div className="sign-form__field">
                         <label htmlFor="password">Пароль</label>
                         {(passwordDirty && passwordErr) && <div style={{color: 'red'}}>{passwordErr}</div>}
-                        <input onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} name="password" id="password" placeholder="Введите пароль" className="sign__input" type="password"></input>
+                        <input onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} name="password" id="password" placeholder="Введите пароль" className="sign__input" type="assword"></input>
                     </div>
                     <div className="sign-form__field">
-                        <label htmlFor="RepeatPassword"></label>
-                        <input name="RepeatPassword" id="RepeatPassword" placeholder="Повторите пароль" className="sign__input" type="password"></input>
+                        <label htmlFor="RepeatPassword">Повторите Пароль</label>
+                        {(RepeatPasswordDirty && repeatPasswordErr) && <div style={{color: 'red'}}>{repeatPasswordErr}</div>}
+                        <input onChange={e => repeatPasswordHandler(e)} value={RepeatPassword} onBlur={e => blurHandler(e)} name="RepeatPassword" id="RepeatPassword" placeholder="Повторите пароль" className="sign__input" type="assword"></input>
                     </div>
                 </div>
                 <div className="sign-form__btn-container ">

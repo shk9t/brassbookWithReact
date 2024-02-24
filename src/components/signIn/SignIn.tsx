@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import './signIn.sass'
+import './signIn.css'
 import SignInForm from "../signInForm/SignInForm.tsx";
 import ImagePipe from "../UI/ImagePipe.tsx";
 

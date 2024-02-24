@@ -1,4 +1,4 @@
-import "./about.sass"
+import "./about.css"
 import Button from "../button/Button.tsx";
 import child1 from "../../assets/img/child1.png"
 interface AboutProps{

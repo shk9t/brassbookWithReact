@@ -1,4 +1,4 @@
-import "./signInForm.sass";
+import "./signInForm.css";
 import Button from "../button/Button.tsx";
 import React, {useState} from "react";
 import axios from "axios";

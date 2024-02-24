@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import './signInput.sass';
-import './feedbackInput.sass'
+import './signInput.css';
+import './feedbackInput.css'
 
 
 interface SignFieldProps extends React.HTMLAttributes<HTMLInputElement>{

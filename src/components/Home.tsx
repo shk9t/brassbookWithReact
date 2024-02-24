@@ -2,8 +2,8 @@ import Hero from "./homeSections/Hero.tsx";
 import Header from "./header/Header.tsx";
 import tube from '../assets/img/tube.png';
 import notesFromTube from '../assets/img/notesFromTube.png';
-import './notes-from-tube.sass'
-import './tube.sass'
+import './notes-from-tube.css'
+import './tube.css'
 import About from "./homeSections/About.tsx";
 import Tutor1 from "./homeSections/Tutor1.tsx";
 import Tutor2 from "./homeSections/Tutor2.tsx";

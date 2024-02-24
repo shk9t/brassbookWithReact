@@ -1,0 +1,143 @@
+.div_main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.div_first {
+    display: inline-flex;
+    gap: 15px;
+}
+
+.div_second {
+    display: inline-flex;
+}
+
+.div_third {
+    display: inline-flex;
+    gap: 15px;
+}
+
+.signform__fieldscontainer {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+    border-radius: 40px;
+    border: 1px solid rgba(25, 6, 54, 0.2);
+    margin-bottom: 32px;
+  }
+  .signform__fieldscontainer label {
+    color: #534068;
+    font-family: var(--accent-font);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+  }
+  .sign__input1 {
+    padding: 23px 36px;
+    border-radius: 20px;
+    background: #F4F4F6;
+    display: block;
+    width: 280px;
+  }
+  .sign__input2 {
+    padding: 23px 36px;
+    border-radius: 20px;
+    background: #F4F4F6;
+    display: block;
+    width: 424px;
+  }
+  .sign__input3 {
+    padding: 23px 36px;
+    border-radius: 20px;
+    background: #F4F4F6;
+    display: block;
+    width: 720px;
+  }
+  .sign__input4 {
+    padding: 23px 36px;
+    border-radius: 20px;
+    background: #F4F4F6;
+    display: block;
+    width: 484px;
+  }
+  .sign__input5 {
+    padding: 23px 36px;
+    border-radius: 20px;
+    background: #F4F4F6;
+    display: block;
+    width: 220px;
+  }
+  .sign__input1::-moz-placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input1::placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input2::-moz-placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input2::placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input3::-moz-placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input3::placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input4::-moz-placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input4::placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input5::-moz-placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+  .sign__input5::placeholder {
+    color: rgba(25, 6, 54, 0.4);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+  }
+
+  

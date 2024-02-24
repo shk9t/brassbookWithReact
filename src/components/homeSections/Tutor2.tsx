@@ -3,9 +3,9 @@ import piano from "../../assets/img/piano.png";
 import icon1 from "../../assets/img/icon1.svg";
 import icon3 from "../../assets/img/icon3.svg";
 import tutor2 from "../../assets/img/tutor2.png";
-import "./achivement.sass";
-import './tutor.sass';
-import './tutor-2.sass';
+import "./achivement.css";
+import './tutor.css';
+import './tutor-2.css';
 import Button from "../button/Button.tsx";
 function Tutor2() {
     return (

@@ -1,6 +1,7 @@
 .imgback {
     position: absolute;
-    height: 100%;
+    height: 100vh;
+    width: 30%;
     top: 1px;
     right: 1px;
 }

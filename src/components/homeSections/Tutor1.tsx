@@ -3,9 +3,9 @@ import tube2 from "../../assets/img/tube2.png";
 import icon1 from "../../assets/img/icon1.svg";
 import icon2 from "../../assets/img/icon2.svg";
 import tutor1 from "../../assets/img/tutor1.png";
-import "./achivement.sass";
-import './tutor.sass';
-import './tutor-1.sass';
+import "./achivement.css";
+import './tutor.css';
+import './tutor-1.css';
 import Button from "../button/Button.tsx";
 
 

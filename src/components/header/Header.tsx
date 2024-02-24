@@ -1,7 +1,7 @@
 import {NavLink} from 'react-router-dom';
 import Button from "../button/Button.tsx";
-import './header.sass'
-import './footer.sass'
+import './header.css'
+import './footer.css'
 
 
 interface HeaderProps{

@@ -1,6 +1,6 @@
 import notes from "../../assets/img/notes.png";
 import partner from "../../assets/img/parner.png"
-import "./more.sass";
+import "./more.css";
 import HomeSwiper from "../homeSwiper/HomeSwiper.tsx";
 import Button from "../button/Button.tsx";
 import Input from "../input/Input.tsx";

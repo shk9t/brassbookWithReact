@@ -21,7 +21,7 @@ function SignUp() {
                 </div>
                 <SignUpForm />
                 <SignUpSelfAcc />
-                {/* <ImagePipe /> */}
+                <ImagePipe />
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 import Button from "../button/Button.tsx";
 import React, {useState} from "react";
 import axios from "axios";
+import classes from "./signupgrid.module.css";
 
 interface SignFormBodyProps {
     className?: string
@@ -28,26 +29,35 @@ function SignUpForm({className}: SignFormBodyProps) {
     }
     return(
         <form action="" className={"sign-form sign-in-form" + '' || className} onSubmit={(event) => onsubmitHandler(event)}>
-            <div className="sign-form__fields-container">
-                <div className="sign-form__field">
-                    <label htmlFor="name">Имя</label>
-                    <input name="name" id="name" placeholder="Введите имя" className="sign__input" onChange={(event) => usernameChangeHandler(event)}></input>
-                </div>
-                <div className="sign-form__field">
-                    <label htmlFor="SecondName">Фамилия</label>
-                    <input name="SecondName" id="SecondName" placeholder="Введите фамилию" className="sign__input" onChange={(event) => passwordChangeHandler(event)}></input>
-                </div>
-                <div className="sign-form__field">
-                    <label htmlFor="nameCompany">Название компании</label>
-                    <input name="nameCompany" id="nameCompany" placeholder="Название компании, которую вы представляете" className="sign__input" onChange={(event) => passwordChangeHandler(event)}></input>
-                </div>
-                <div className="sign-form__field">
-                    <label htmlFor="job">Должность</label>
-                    <input name="job" id="job" placeholder="Ваша должность" className="sign__input" onChange={(event) => passwordChangeHandler(event)}></input>
-                </div>
-                <div className="sign-form__field">
-                    <label htmlFor="INN">ИНН</label>
-                    <input name="INN" id="INN" placeholder="Введите ИНН" className="sign__input" onChange={(event) => passwordChangeHandler(event)}></input>
+
+            <div className={classes.signform__fieldscontainer}>
+                <div className={classes.div_main}>
+                    <div className={classes.div_first}>
+                        <div className={classes.signform__field}>
+                            <label htmlFor="name">Имя</label>
+                            <input name="name" id="name" placeholder="Введите имя" className={classes.sign__input1} onChange={(event) => usernameChangeHandler(event)}></input>
+                        </div>
+                        <div className={classes.signform__field}>
+                            <label htmlFor="SecondName">Фамилия</label>
+                            <input name="SecondName" id="SecondName" placeholder="Введите фамилию" className={classes.sign__input2} onChange={(event) => passwordChangeHandler(event)}></input>
+                        </div>
+                    </div>
+                    <div className={classes.div_second}>
+                        <div className={classes.signform__field}>
+                            <label htmlFor="nameCompany">Название компании</label>
+                            <input name="nameCompany" id="nameCompany" placeholder="Название компании, которую вы представляете" className={classes.sign__input3} onChange={(event) => passwordChangeHandler(event)}></input>
+                        </div>
+                    </div>
+                    <div className={classes.div_third}>
+                        <div className={classes.signform__field}>
+                            <label htmlFor="job">Должность</label>
+                            <input name="job" id="job" placeholder="Ваша должность" className={classes.sign__input4} onChange={(event) => passwordChangeHandler(event)}></input>
+                        </div>
+                        <div className={classes.signform__field}>
+                            <label htmlFor="INN">ИНН</label>
+                            <input name="INN" id="INN" placeholder="Введите ИНН" className={classes.sign__input5} onChange={(event) => passwordChangeHandler(event)}></input>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="sign-form__btn-container ">

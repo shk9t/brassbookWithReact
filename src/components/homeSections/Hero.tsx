@@ -1,4 +1,4 @@
-import './hero.sass'
+import './hero.css'
 import Button from "../button/Button.tsx";
 
 function Hero () {

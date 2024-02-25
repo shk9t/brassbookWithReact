@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Button from '../button/Button';
 
 
-const SignUpSelfAcc = () => {
+const SignUpSelfAcc = (e: any) => {
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -14,7 +14,7 @@ const SignUpSelfAcc = () => {
     const [RepeatPasswordDirty, setRepeatPasswordDirty] = useState(false)
     const [repeatPasswordErr, setRepeatPasswordlErr] = useState('пароли должны совпадать')
 
-    const emailHandler = (e) => {
+    const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value)
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         if(!re.test(String(e.target.value).toLowerCase())){
@@ -24,7 +24,7 @@ const SignUpSelfAcc = () => {
         }
     }
 
-    const passwordHandler = (e) => {
+    const passwordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value)
         if(e.target.value.length < 3 || e.target.value.length > 12){
             setpasswordlErr('пароль должен быть длиннее 3 и меньше 12 символов')
@@ -38,7 +38,7 @@ const SignUpSelfAcc = () => {
         }
     }
 
-    const repeatPasswordHandler = (e) => {
+    const repeatPasswordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setRepeatPassword(e.target.value)
         if(e.target.value != password ){
             setRepeatPasswordlErr('пароли должны совпадать')
@@ -48,7 +48,7 @@ const SignUpSelfAcc = () => {
     }
 
     
-    const blurHandler = (e) => {
+    const blurHandler = (e: React.FocusEvent<HTMLInputElement, Element>) => {
         switch(e.target.name){
             case 'email':
                 setEmailDirty(true)

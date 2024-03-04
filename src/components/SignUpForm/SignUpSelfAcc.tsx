@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Button from '../button/Button';
+import classes from './signupcorp.module.css';
+import { NavLink } from "react-router-dom";
 
 
 const SignUpSelfAcc = (e: any) => {
@@ -64,6 +66,10 @@ const SignUpSelfAcc = (e: any) => {
 
     return(
             <form action="" className={"sign-form sign-in-form" + '' }>
+            <div className={classes.ChangeAcc}>
+                    <div className={classes.button__corporationact}>Личный аккаунт</div>
+                    <div className={classes.button__corporationacttt}>________________________</div>
+            </div>
                 <div className="sign-form__fields-container">
                     <div className="sign-form__field">
                         <label htmlFor="email">Почта</label>
@@ -82,8 +88,8 @@ const SignUpSelfAcc = (e: any) => {
                     </div>
                 </div>
                 <div className="sign-form__btn-container ">
-                    <Button isBtn={true} className="button-type-3 sign-page-button">Войти</Button>
-                </div>
+                <Button isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
+            </div>
             </form>
         )
 };

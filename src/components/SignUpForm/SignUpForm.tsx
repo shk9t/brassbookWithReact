@@ -2,6 +2,7 @@ import Button from "../button/Button.tsx";
 import React, {useState} from "react";
 import axios from "axios";
 import classes from "./signupgrid.module.css";
+import { NavLink } from "react-router-dom";
 
 interface SignFormBodyProps {
     className?: string
@@ -42,8 +43,12 @@ function SignUpForm({className}: SignFormBodyProps) {
       }
 
     return(
+        
         <form action="" className={"sign-form sign-in-form" + '' || className}>
-
+            <div className={classes.ChangeAcc}>
+                    <div className={classes.button__personalact}>Корпоративный аккаунт</div>
+                    <div className={classes.button__personalacttt}>____________________________________</div>
+            </div>
             <div className={classes.signform__fieldscontainer}>
                 <div className={classes.div_main}>
                     <div className={classes.div_first}>
@@ -76,7 +81,7 @@ function SignUpForm({className}: SignFormBodyProps) {
                 </div>
             </div>
             <div className="sign-form__btn-container ">
-                <Button onClick={createKorpUser} isBtn={true} className="button-type-2 sign-page-button">Продолжить</Button>
+                <Button isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
             </div>
         </form>
     )

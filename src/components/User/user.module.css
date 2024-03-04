@@ -1,0 +1,126 @@
+.text__main {
+    color: var(--font-color);
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: -0.48px;
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.div__menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    background-color: white;
+    padding-inline-start: 60px;
+    padding-top: 32px;
+}
+
+.ul__menu1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 16px;
+}
+
+.ul__menu1 a {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+    padding: 9px 12px 9px 12px;
+    color: var(--font-color);
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.48px;
+    font-family: var(--main-font);
+    font-weight: 500;
+    gap: 8px;
+}
+
+.ul__menu2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+}
+
+.ul__menu2 a {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+    padding: 9px 12px 9px 12px;
+    color: var(--font-color);
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.48px;
+    font-family: var(--main-font);
+    font-weight: 500;
+    gap: 8px;
+}
+
+.ul__menu1 a:hover {
+    color: rgb(107, 39, 255);
+}
+
+.ul__menu1 svg path:hover {
+    fill: rgb(107, 39, 255);
+}
+
+.ul__menu2 a:hover {
+    color: rgb(107, 39, 255);
+}
+
+.ul__menu2 svg path:hover {
+    fill: rgb(107, 39, 255);
+}
+
+.signin__backlink {
+    color: rgba(25, 6, 54, 0.3);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: -0.16px;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+  }
+
+.button__all {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+    color: rgba(25, 6, 54, 0.3);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.16px;
+    gap: 15px;
+    max-width: 155px;
+    margin-bottom: 100px;
+}
+
+.a__exit {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color);
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.48px;
+    font-family: var(--main-font);
+    font-weight: 500;
+    gap: 8px;
+    max-width: 90px;
+    padding-inline-start: 12px;
+}
+
+.a__exit:hover {
+    color: rgb(107, 39, 255);
+}
+
+.a__exit svg path:hover {
+    fill: rgb(107, 39, 255);
+}

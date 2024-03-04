@@ -12,7 +12,7 @@ interface HeaderProps{
 }
 function Header({headerStyle, headerContainerStyle, logoStyle, linkStyle}: HeaderProps) {
     let links;
-    if (window.location.pathname === '/signin' || window.location.pathname === '/signup'){
+    if (window.location.pathname === '/signin'){
         links =
         <ul className="nav__body">
             <li><a href="#" className={"nav__link " + (linkStyle || '')}>О проекте</a></li>
@@ -20,7 +20,29 @@ function Header({headerStyle, headerContainerStyle, logoStyle, linkStyle}: Heade
             <li><a href="#" className={"nav__link " + (linkStyle || '')}>Галерея</a></li>
             <li><a href="#" className={"nav__link " + (linkStyle || '')}>Связаться с нами</a></li>
         </ul>
-    } else {
+    } 
+
+    else if (window.location.pathname === '/signup'){
+        links =
+        <ul className="nav__body">  
+            <li><a href="#" className={"nav__link " + (linkStyle || '')}>О проекте</a></li>
+            <li><a href="#" className={"nav__link " + (linkStyle || '')}>Команда</a></li>
+            <li><a href="#" className={"nav__link " + (linkStyle || '')}>Галерея</a></li>
+            <li><a href="#" className={"nav__link " + (linkStyle || '')}>Связаться с нами</a></li>
+        </ul>
+    }
+
+    else if (window.location.pathname === '/signupauth'){
+        links =
+        <ul className="nav__body">  
+            <li><a href="#" className={"nav__link " + (linkStyle || '')}>О проекте</a></li>
+            <li><a href="#" className={"nav__link " + (linkStyle || '')}>Команда</a></li>
+            <li><a href="#" className={"nav__link " + (linkStyle || '')}>Галерея</a></li>
+            <li><a href="#" className={"nav__link " + (linkStyle || '')}>Связаться с нами</a></li>
+        </ul>
+    }
+    
+    else {
         links =
         <ul className="nav__body">
             <li><a href="#" className={"nav__link " + (linkStyle || '')}>О проекте</a></li>

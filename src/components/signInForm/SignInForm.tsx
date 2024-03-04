@@ -2,6 +2,7 @@ import "./signInForm.css";
 import Button from "../button/Button.tsx";
 import React, {useState} from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 interface SignFormBodyProps {
     className?: string
@@ -40,7 +41,7 @@ function SignInForm({className}: SignFormBodyProps) {
                 </div>
             </div>
             <div className="sign-form__btn-container ">
-                <Button isBtn={true} className="button-type-3 sign-page-button">Войти</Button>
+                <Button isBtn={true} className="button-type-3 sign-page-button"><NavLink to='/user'>Войти</NavLink></Button>
             </div>
         </form>
     )

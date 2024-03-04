@@ -34,4 +34,46 @@
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.16px;
-}/*# sourceMappingURL=singup.css.map */
+}
+
+.ChangeAcc {
+  display: inline-flex;
+  margin-inline-start: 40px;
+  gap: 32px;
+}
+
+.button__personal {
+  color: rgb(117, 106, 134);
+  font-size: 24px;
+  line-height: 1.6;
+  letter-spacing: -0.48px;
+  font-family: var(--main-font);
+  font-weight: 600;
+}
+
+.button__corporation {
+  color: rgb(117, 106, 134);
+  font-size: 24px;
+  line-height: 1.6;
+  letter-spacing: -0.48px;
+  font-family: var(--main-font);
+  font-weight: 600;
+}
+
+.button__personalact {
+  color: blue;
+  font-size: 24px;
+  line-height: 1.6;
+  letter-spacing: -0.48px;
+  font-family: var(--main-font);
+  font-weight: 800;
+}
+
+.button__corporationact {
+  color: blue;
+  font-size: 24px;
+  line-height: 1.6;
+  letter-spacing: -0.48px;
+  font-family: var(--main-font);
+  font-weight: 800;
+}

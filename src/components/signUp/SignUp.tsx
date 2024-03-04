@@ -3,11 +3,11 @@ import SignUpForm from "../SignUpForm/SignUpForm.tsx";
 import ImagePipe from "../UI/ImagePipe.tsx";
 import SignUpSelfAcc from "../SignUpForm/SignUpSelfAcc.tsx";
 import { useState } from "react";
+import classes from "./singup.module.css"
 
 function SignUp() {
 
     const [registrationType, setRegistrationType] = useState('personal')
-
 
     return (
         <div className="sign-in">
@@ -21,9 +21,11 @@ function SignUp() {
                         Вы уже зарегистрированны на сайте? <NavLink to='/signin'>Войти</NavLink>
                     </p>
                 </div>
-                <div onClick={() => setRegistrationType('personal')}>Личный аккаунт</div>
-                <div onClick={() => setRegistrationType('corp')}>Корпоративный аккаунт</div>
-                {registrationType === 'personal' ? <SignUpSelfAcc /> : <SignUpForm />}
+                <div className={classes.ChangeAcc}>
+                    <div onClick={() => setRegistrationType('personal')} className={classes.button__personal}>Личный аккаунт</div>
+                    <div onClick={() => setRegistrationType('corp')} className={classes.button__corporation}>Корпоративный аккаунт</div>
+                </div>
+                    {registrationType === 'personal' ? <SignUpSelfAcc /> : <SignUpForm />}
                 <ImagePipe />
             </div>
         </div>

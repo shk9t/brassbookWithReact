@@ -59,7 +59,7 @@ function MusicPlayer() {
   return (
     <div className="component">
       <h2>Playing Now</h2>
-      <img className="musicCover" src="D:\code\BrassbookReact\brassbookWithReact\src\assets\img" />
+      <img className="musicCover" src="" /> {/*Находится в папке img MusicPlayer*/}
       <div>
         <h3 className="title">Rubaiyyan</h3>
         <p className="subTitle">bethoven_menuet</p>

@@ -1,6 +1,7 @@
 import {NavLink} from "react-router-dom";
 import { useState } from "react";
 import classes from "./user.module.css"
+import MusicPlayer from "./MusicPlayer";
 
 function User() {
 
@@ -28,6 +29,7 @@ function User() {
                     <a href="">Длинное название</a>
                 </ul>
                 <button className={classes.button__all}>Посмотреть все <svg width="6.368774" height="11.667211" viewBox="0 0 6.36877 11.6672" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><desc>Created with Pixso.</desc><defs/><path id="Vector" d="M5.84998 4.57657L4.20831 2.9349L1.53333 0.2599C0.966675 -0.298433 0 0.101567 0 0.901567L0 6.09323L0 10.7682C0 11.5682 0.966675 11.9682 1.53333 11.4016L5.84998 7.0849C6.54169 6.40157 6.54169 5.26823 5.84998 4.57657Z" fill="#230B3F" fill-opacity="0.300000" fill-rule="nonzero"/></svg></button>
+                <MusicPlayer/>
                 <NavLink to='/signin' className={classes.a__exit}><svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><desc>Created with Pixso.</desc><defs/><path id="Vector" d="M16.8 2L14.2 2C11 2 9 4 9 7.2L9 11.25L15.25 11.25C15.66 11.25 16 11.59 16 12C16 12.41 15.66 12.75 15.25 12.75L9 12.75L9 16.8C9 20 11 22 14.2 22L16.79 22C19.99 22 21.99 20 21.99 16.8L21.99 7.2C22 4 20 2 16.8 2Z" fill="#230B3F" fill-opacity="1.000000" fill-rule="nonzero"/><path id="Vector" d="M4.56 11.25L6.63 9.18002C6.78003 9.03003 6.84998 8.84003 6.84998 8.65002C6.84998 8.46002 6.78003 8.26003 6.63 8.12003C6.34003 7.83003 5.85999 7.83003 5.57001 8.12003L2.22003 11.47C1.92999 11.76 1.92999 12.24 2.22003 12.53L5.57001 15.88C5.85999 16.17 6.34003 16.17 6.63 15.88C6.91998 15.59 6.91998 15.11 6.63 14.82L4.56 12.75L9 12.75L9 11.25L4.56 11.25Z" fill="#230B3F" fill-opacity="1.000000" fill-rule="nonzero"/><g opacity="0.000000"/></svg>
     Выход</NavLink>
             </div>

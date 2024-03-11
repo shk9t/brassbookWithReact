@@ -81,7 +81,7 @@ function SignUpForm({className}: SignFormBodyProps) {
                 </div>
             </div>
             <div className="sign-form__btn-container ">
-                <Button isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
+                <Button isBtn={true} className="button-type-4 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
             </div>
         </form>
     )

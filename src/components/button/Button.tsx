@@ -1,7 +1,8 @@
 import {NavLink} from "react-router-dom";
 import "./buttonType1.css";
 import "./buttonType2.css";
-import "./buttonType3.css"
+import "./buttonType3.css";
+import "./buttonType4.css";
 import {ReactNode} from "react";
 
 

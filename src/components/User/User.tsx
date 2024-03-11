@@ -27,7 +27,7 @@ function User() {
         </svg>
         <p className={classes.signin__backlink}>Меню</p>
         <ul className={classes.ul__menu1}>
-          <a href="">
+          <a href="" className={classes.hovelink}>
             <svg
               width="18.000000"
               height="19.987488"

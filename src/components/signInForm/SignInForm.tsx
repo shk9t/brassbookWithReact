@@ -2,14 +2,20 @@ import "./signInForm.css";
 import Button from "../button/Button.tsx";
 import React, {useState, FC, useContext} from "react";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Context } from "../../main.tsx";
 
 const SignInForm: FC = () => {
 
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+    const navigate = useNavigate()
     const {store} = useContext(Context)
+    const handleClick = (e: any) => {
+        e.preventDefault()
+        store.login(email, password)
+        navigate('/user')
+    }
 
     return (
         <form action="" className={"sign-form sign-in-form" + ''}>
@@ -24,7 +30,7 @@ const SignInForm: FC = () => {
                 </div>
             </div>
             <div className="sign-form__btn-container ">
-                <Button onClick={() => store.login(email, password)} isBtn={true} className="button-type-3 sign-page-button">Войти</Button>
+                <Button onClick={handleClick}  isBtn={true} className="button-type-3 sign-page-button">Войти</Button>
             </div>
         </form>
     );

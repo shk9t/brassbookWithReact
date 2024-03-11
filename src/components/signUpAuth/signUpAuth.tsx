@@ -13,7 +13,7 @@ function SignUpAuth() {
                         <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke="#190636" strokeOpacity="0.3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>Вернуться назад</NavLink>
                     <h1 className={"sign-in__title"}>Регистрация</h1>
-                    <p className="sign-in__text">Проверьте указанную почту   <br/>
+                    <p className="sign-in__text">Проверьте указанную почту {``}  <br/>
                         На неё должен придти шестизначный код.
                     </p>
                     <p className="sign-in__backlink">Не пришел код? Отправить повторно через 55 секунд</p>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
-import bethoven_menuet from "/code/BrassbookReact/brassbookWithReact/src/assets/music/bethoven_menuet.mp3";
+import bethoven_menuet from "/src/assets/music/bethoven_menuet.mp3";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 import { IconContext } from "react-icons";
@@ -85,7 +85,7 @@ function MusicPlayer() {
           }}
         />
       </div>
-      <div>
+      <div className="divmusic">
         <button className="playButton">
           <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
             <BiSkipPrevious />

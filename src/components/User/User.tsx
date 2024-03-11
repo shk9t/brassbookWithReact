@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import classes from "./user.module.css";
+import MusicPlayer from "./MusicPlayer";
 
 function User() {
   return (
@@ -228,6 +229,7 @@ function User() {
           </button>
         </div>
       </div>
+      <MusicPlayer/>
     </div>
   );
 }

@@ -13,6 +13,7 @@ interface ButtonProps{
     isBtn?: boolean
     children?: ReactNode
     isSubmit?: boolean
+    onClick?: any
 }
 function Button(buttonProps: ButtonProps) {
 
@@ -22,6 +23,7 @@ function Button(buttonProps: ButtonProps) {
                  style={{color: buttonProps.textAndBorderColor, borderColor: buttonProps.textAndBorderColor}}
         >{buttonProps.buttonText || ''}{buttonProps.children}</NavLink> :
             <button
+                 onClick={buttonProps.onClick}
                  type='submit'
                  className={buttonProps.className || ''}
                  style={{color: buttonProps.textAndBorderColor, borderColor: buttonProps.textAndBorderColor}}

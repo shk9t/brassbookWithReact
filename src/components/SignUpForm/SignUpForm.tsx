@@ -12,6 +12,7 @@ function SignUpForm({className}: SignFormBodyProps) {
     const [INN, setINN] = useState('')
     const [INNDirty, setINNDirty] = useState(false)
     const [INNErr, setINNErr] = useState('')
+    const [user, setUser] = useState(null);
 
     const blurHandler = (e: React.FocusEvent<HTMLInputElement, Element>) => {
         switch(e.target.name){
@@ -29,6 +30,17 @@ function SignUpForm({className}: SignFormBodyProps) {
             setINNErr('')
         }
     }
+
+    function createKorpUser() {
+        axios
+          .post("localhost:8000/v1/auth/registration", {
+            title: "Hello World!",
+            body: "This is a new post."
+          })
+           .then((response) => {
+            setUser(response.data);
+           });
+      }
 
     return(
         

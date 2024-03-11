@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Button from '../button/Button';
 import classes from './signupcorp.module.css';
 import { NavLink } from "react-router-dom";
-
+import { Context } from '../../main';
 
 const SignUpSelfAcc = (e: any) => {
     
@@ -15,6 +15,7 @@ const SignUpSelfAcc = (e: any) => {
     const [RepeatPassword, setRepeatPassword] = useState('')
     const [RepeatPasswordDirty, setRepeatPasswordDirty] = useState(false)
     const [repeatPasswordErr, setRepeatPasswordlErr] = useState('пароли должны совпадать')
+    const {store} = useContext(Context)
 
     const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value)
@@ -88,7 +89,7 @@ const SignUpSelfAcc = (e: any) => {
                     </div>
                 </div>
                 <div className="sign-form__btn-container ">
-                <Button isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
+                <Button onClick={() => store.registration(email, password)} isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
             </div>
             </form>
         )

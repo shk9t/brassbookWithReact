@@ -7,7 +7,7 @@ function User() {
   return (
     <div>
       <div className={classes.div__menu}>
-        <svg
+      <NavLink to={'/'}><svg
           width="150.043335"
           height="22.141113"
           viewBox="0 0 150.043 22.1411"
@@ -24,7 +24,7 @@ function User() {
             fill-opacity="1.000000"
             fill-rule="evenodd"
           />
-        </svg>
+        </svg></NavLink>
         <p className={classes.signin__backlink}>Меню</p>
         <ul className={classes.ul__menu1}>
           <a href="" className={classes.hovelink}>

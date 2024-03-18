@@ -2,6 +2,7 @@ import {NavLink} from "react-router-dom";
 import ImagePipe from "../UI/ImagePipe.tsx";
 import { useState } from "react";
 import Button from "../button/Button.tsx";
+import classes from "./signupauth.module.css";
 
 function SignUpAuth() {
 
@@ -17,13 +18,13 @@ function SignUpAuth() {
                         На неё должен придти шестизначный код.
                     </p>
                     <p className="sign-in__backlink">Не пришел код? Отправить повторно через 55 секунд</p>
-                    <div>
-                        <label htmlFor=""><input type="number" /></label>
-                        <label htmlFor=""><input type="text" /></label>
-                        <label htmlFor=""><input type="text" /></label>
-                        <label htmlFor=""><input type="text" /></label>
-                        <label htmlFor=""><input type="text" /></label>
-                        <label htmlFor=""><input type="text" /></label>
+                    <div className={classes.div__input}>
+                        <label htmlFor=""><input type="text" maxlength="1"/></label>
+                        <label htmlFor=""><input type="text" maxlength="1"/></label>
+                        <label htmlFor=""><input type="text" maxlength="1"/></label>
+                        <label htmlFor=""><input type="text" maxlength="1"/></label>
+                        <label htmlFor=""><input type="text" maxlength="1"/></label>
+                        <label htmlFor=""><input type="text" maxlength="1"/></label>
                     </div>
                 </div>
                 <Button isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Зарегистрироваться</NavLink></Button>

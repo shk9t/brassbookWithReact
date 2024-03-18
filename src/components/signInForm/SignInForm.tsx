@@ -4,21 +4,30 @@ import React, {useState, FC, useContext} from "react";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Context } from "../../main.tsx";
+import AuthService from "../../../services/AuthService.ts";
+import {Simulate} from "react-dom/test-utils";
+import error = Simulate.error;
 
 const SignInForm: FC = () => {
 
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+    const [error, setError] = useState('')
     const navigate = useNavigate()
     const {store} = useContext(Context)
-    const handleClick = (e: any) => {
+    const handleClick = async (e) => {
         e.preventDefault()
-        store.login(email, password)
-        navigate('/user')
+        const response = await AuthService.login(email, password)
+        if (response.data?.error) {
+            setError(response.data.error)
+        } else {
+            navigate('/user')
+        }
     }
 
     return (
         <form action="" className={"sign-form sign-in-form" + ''}>
+            {error && <div>{error}</div>}
             <div className="sign-form__fields-container">
                 <div className="sign-form__field">
                     <label htmlFor="email">Почта</label>
@@ -30,7 +39,7 @@ const SignInForm: FC = () => {
                 </div>
             </div>
             <div className="sign-form__btn-container ">
-                <Button onClick={handleClick}  isBtn={true} className="button-type-2 sign-page-button">Войти</Button>
+                <Button onClick={e => handleClick(e)}  isBtn={true} className="button-type-2 sign-page-button">Войти</Button>
             </div>
         </form>
     );

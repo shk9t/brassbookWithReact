@@ -31,16 +31,9 @@ function SignUpForm({className}: SignFormBodyProps) {
         }
     }
 
-    function createKorpUser() {
-        axios
-          .post("localhost:8000/v1/auth/registration", {
-            title: "Hello World!",
-            body: "This is a new post."
-          })
-           .then((response) => {
-            setUser(response.data);
-           });
-      }
+    function handleClick(e) {
+        e.preventDefault()
+    }
 
     return(
         
@@ -81,7 +74,7 @@ function SignUpForm({className}: SignFormBodyProps) {
                 </div>
             </div>
             <div className="sign-form__btn-container ">
-                <Button isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
+                <Button onClick={e => handleClick(e)} isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
             </div>
         </form>
     )

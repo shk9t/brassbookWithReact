@@ -1,11 +1,13 @@
 import React, {useState, useContext} from 'react';
 import Button from '../button/Button';
 import classes from './signupcorp.module.css';
-import { NavLink } from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import { Context } from '../../main';
+import AuthService from "../../../services/AuthService.ts";
 
 const SignUpSelfAcc = (e: any) => {
-    
+    const navigate = useNavigate()
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [emailDirty, setEmailDirty] = useState(false)
@@ -15,6 +17,7 @@ const SignUpSelfAcc = (e: any) => {
     const [RepeatPassword, setRepeatPassword] = useState('')
     const [RepeatPasswordDirty, setRepeatPasswordDirty] = useState(false)
     const [repeatPasswordErr, setRepeatPasswordlErr] = useState('пароли должны совпадать')
+    const [error, setError] = useState('')
     const {store} = useContext(Context)
 
     const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,8 +68,19 @@ const SignUpSelfAcc = (e: any) => {
         }
     }
 
+    const handleClick = async (e) => {
+        e.preventDefault()
+        const response = await AuthService.registration({role_name: 'ROLE_PERSONAL', email, password})
+        if (response.data?.error) {
+            setError(response.data?.error)
+        } else {
+            navigate('/user')
+        }
+    }
+
     return(
             <form action="" className={"sign-form sign-in-form" + '' }>
+                {error && <div>{error}</div>}
             <div className={classes.ChangeAcc}>
                     <div className={classes.button__corporationact}>Личный аккаунт</div>
                     <div className={classes.button__corporationacttt}>________________________</div>
@@ -89,7 +103,7 @@ const SignUpSelfAcc = (e: any) => {
                     </div>
                 </div>
                 <div className="sign-form__btn-container ">
-                <Button onClick={() => store.registration(email, password)} isBtn={true} className="button-type-2 sign-page-button"><NavLink to='/signupauth'>Продолжить</NavLink></Button>
+                <Button onClick={(e) => handleClick(e)} isBtn={true} className="button-type-2 sign-page-button">Продолжить</Button>
             </div>
             </form>
         )
